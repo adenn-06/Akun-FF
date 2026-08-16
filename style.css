@@ -92,7 +92,7 @@ body {
 /* Floating WhatsApp button */
 .wa-float {
   position: fixed !important;
-  right: env(safe-area-inset-right, clamp(12px, 3vw, 20px)) !important;
+  left: env(safe-area-inset-left, clamp(12px, 3vw, 20px)) !important;
   bottom: env(safe-area-inset-bottom, clamp(12px, 3vw, 20px)) !important;
   background: #25D366;
   color: #042017;
