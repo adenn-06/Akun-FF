@@ -1,0 +1,242 @@
+:root {
+  --bg1: #0f172a;
+  --bg2: #1f2937;
+  --accent: #ff7a18;
+  --muted: #94a3b8;
+  --card: #0b1220;
+  --glass: rgba(255, 255, 255, 0.04);
+  --max-width: 1100px;
+}
+
+/* Reset & base */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(180deg, var(--bg1), var(--bg2));
+  color: #e6eef8;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+.site-header {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.brand-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ffb347, #ff7a18);
+  color: #111827;
+  font-weight: 900;
+  box-shadow: 0 8px 20px rgba(255, 122, 24, 0.35);
+}
+.brand {
+  margin: 0;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+.tagline {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.store-desc {
+  margin: 0.6rem 0 0;
+  color: #dbeeff;
+  background: rgba(255,255,255,0.02);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 0.95rem;
+}
+
+/* Navigation */
+.nav { display:flex;align-items:center;justify-content:space-between;gap:1rem }
+.nav-actions { display:flex;gap:1rem;align-items:center }
+.nav-link { color: #e6eef8; text-decoration:none; padding:.25rem .5rem; border-radius:6px; opacity:.95 }
+.nav-link:hover { background: rgba(255,255,255,0.03) }
+.wa-btn { background:#25D366;color:#042017;padding:.4rem .7rem;border-radius:8px;text-decoration:none;font-weight:600 }
+
+/* WhatsApp links */
+.whatsapp-link { color:#25D366;font-weight:700;text-decoration:none }
+.whatsapp-link:hover { text-decoration:underline }
+
+/* Floating WhatsApp button */
+.wa-float { position:fixed;right:18px;bottom:18px;background:#25D366;color:#042017;padding:12px 14px;border-radius:50px;box-shadow:0 8px 24px rgba(2,6,23,0.6);z-index:90;text-decoration:none;font-weight:700 }
+
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 2rem;
+  align-items: center;
+  margin: 2rem 0;
+}
+.hero-content h2 {
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+}
+.hero-content p {
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  background: linear-gradient(90deg, var(--accent), #ffb347);
+  color: #081127;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.hero-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Testimonials grid */
+.section-title {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* Product cards */
+.products .grid { grid-template-columns: repeat(2, 1fr); }
+.product-card { display:flex;flex-direction:column;background:linear-gradient(180deg, rgba(255,255,255,0.02), var(--glass));border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(2,6,23,0.6);transition:transform .16s }
+.product-card:hover{transform:translateY(-6px)}
+.product-media img{width:100%;height:200px;object-fit:cover}
+.product-body{padding:1rem}
+.product-name{margin:0 0 .25rem}
+.price{font-weight:700;color:#fff;margin:0.5rem 0}
+.product-actions{display:flex;gap:.5rem;align-items:center}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.08);padding:.5rem .75rem;border-radius:8px;color:var(--muted);cursor:pointer}
+.btn-ghost{background:transparent;border:0;color:var(--muted);cursor:pointer}
+
+/* Promo section */
+.promo{display:grid;grid-template-columns:1fr 420px;gap:1.25rem;align-items:center;margin:1.5rem 0}
+.promo-left h2{margin:0 0 .5rem}
+.promo-right img{width:100%;border-radius:12px}
+
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), var(--glass));
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+  transition: transform 160ms;
+}
+.card:hover { transform: translateY(-6px); }
+
+.card-media img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.card-body { padding: 1rem; }
+.name { margin: 0 0 0.25rem; }
+.meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.message { margin: 0; color: #cfe8ff; }
+.rating { color: #ffd166; }
+
+/* Center testimonials */
+.testimonials .grid {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 0.5rem;
+}
+.testimonials .card { width: 320px; }
+
+/* Footer */
+.site-footer {
+  padding: 1.5rem 0;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(2, 6, 23, 0.6), rgba(2, 6, 23, 0.85));
+  z-index: 80;
+}
+.modal[aria-hidden="false"] { display: flex; }
+.modal-content {
+  position: relative;
+  max-width: 900px;
+  width: 92%;
+  padding: 1rem;
+  border-radius: 12px;
+}
+.modal-content img { width: 100%; height: auto; border-radius: 10px; display: block; }
+.modal-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 0;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .products .grid, .grid { grid-template-columns: 1fr; }
+  .hero-image, .promo-right { order: -1; }
+}
+
+@media (max-width: 420px) {
+  .hero-content h2 { font-size: 1.4rem; }
+  .card-media img { height: 160px; }
+}
+
+/* Accessibility focus */
+:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.06);
+  outline-offset: 2px;
+}
