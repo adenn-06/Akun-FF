@@ -90,7 +90,24 @@ body {
 .whatsapp-link:hover { text-decoration:underline }
 
 /* Floating WhatsApp button */
-.wa-float { position: fixed; right: clamp(12px, 3vw, 20px); bottom: clamp(12px, 3vw, 20px); background: #25D366; color: #042017; padding: clamp(8px, 2.2vw, 14px) clamp(10px, 3vw, 18px); border-radius: 50px; box-shadow: 0 8px 24px rgba(2,6,23,0.6); z-index: 9999; text-decoration: none; font-weight: 700; font-size: clamp(0.9rem, 2vw, 1.05rem); display:flex;align-items:center;transform:translateZ(0);pointer-events:auto}
+.wa-float {
+  position: fixed !important;
+  right: env(safe-area-inset-right, clamp(12px, 3vw, 20px)) !important;
+  bottom: env(safe-area-inset-bottom, clamp(12px, 3vw, 20px)) !important;
+  background: #25D366;
+  color: #042017;
+  padding: clamp(8px, 2.2vw, 14px) clamp(10px, 3vw, 18px);
+  border-radius: 50px;
+  box-shadow: 0 8px 24px rgba(2,6,23,0.6);
+  z-index: 2147483647 !important;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  display: flex;
+  align-items: center;
+  transform: translateZ(0);
+  pointer-events: auto;
+}
 
 
 /* Hero */
